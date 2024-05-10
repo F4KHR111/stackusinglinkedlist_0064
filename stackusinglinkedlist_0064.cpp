@@ -13,15 +13,19 @@ public:
 
 class stack {
 private:
-    Node* top; 
+    Node* top;
 
 public:
     Stack() {
         top = NULL;
     }
+
+
+    int push(int value) {
+        Node* newNode = new Node();
+        newNode->data = value;
+        newNode->next = top;
+        cout << "Push value: " << value << endl;
+        return value;
+    }
 };
-
-int push(int value) {
-    
-}
-
