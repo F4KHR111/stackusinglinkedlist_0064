@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+//NOde class reprenting a single node in the linked list
 class Node {
 public:
     int data;
@@ -11,16 +13,19 @@ public:
     }
 };
 
-class stack {
+// Stack Class
+class Stack {
 private:
-    Node* top;
+    Node* top; // Pointer to the top node of the stack
+
 
 public:
     Stack() {
-        top = NULL;
+        top = NULL; // Initialize the stack with a null top pointer
+
     }
 
-
+    // Push operetion: Insert an element onto the top of the stack
     int push(int value) {
         Node* newNode = new Node();
         newNode->data = value;
@@ -29,8 +34,9 @@ public:
         return value;
     }
 
+    // Pop operation: Remove the topmost element from the stack
     void pop() {
-            if (isEmpty()) {
+        if (isEmpty()) {
             cout << "Stack is empty. " << endl;
         }
         cout << "Popped value: " << top->data << endl;
@@ -47,8 +53,7 @@ public:
             Node* current = top;
             while (current != NULL) {
                 cout << current->data << "" << endl;
-
-             current = current->next;
+                current = current->next;
             }
             cout << endl;
         } // return the value of the top node
@@ -88,6 +93,7 @@ int main() {
             }
             else {
                 cout << "Stack is Empty. Cannot pop." << endl;
+
             }
             break;
         case 3:
@@ -96,6 +102,7 @@ int main() {
             }
             else {
                 cout << "Stack is Empty. No top value." << endl;
+
             }
             break;
         case 4:
@@ -109,14 +116,5 @@ int main() {
         cout << endl;
     }
 
-    return 0;
+    return 0;
 }
-
-
-
-
-
-
-
-    }
-};
